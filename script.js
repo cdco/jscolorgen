@@ -1,12 +1,13 @@
+
 $(document).ready(function() {
     //change words on hover
     $('.button').mouseover(function() {
-        //Change content
+        //Change Button Text
         $('.button').html("Seriously, don't");
     });
 
     $('.button').mouseleave(function() {
-        //Change Content
+         //Change Button Text
         $('.button').html("Don't click me");
     })
     var button = $('.button');
@@ -15,17 +16,17 @@ $(document).ready(function() {
     button.click(function() {
         //change words on hover
         $('.button').mouseover(function() {
-            //Change content
+             //Change Button Text
             $('.button').html("Please don't click me AGAIN!");
         });
 
         $('.button').mouseleave(function() {
-            //Change Content
+             //Change Button Text
             $('.button').html('I TOLD YOU NOT TO CLICK ME');
         })
 
-
-
+        
+        // uses variable colorString (generated below) to flash random colors on screen
         setInterval(function() {
 
             var colorString = randomColor();
@@ -40,6 +41,7 @@ $(document).ready(function() {
 
 });
 
+// Uses 'math' function to randomly generate r, g, and b and inputs r,g,b to variable colorString
 function randomColor() {
 
     var r = Math.floor(Math.random() * 256);
